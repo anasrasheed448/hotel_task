@@ -5,12 +5,12 @@ class PartnerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           customHeading("Our Partners"),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Text.rich(
@@ -34,7 +34,7 @@ class PartnerScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -50,14 +50,13 @@ class PartnerScreen extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           CustomBtn(
             "Find Your Style",
             Colors.white,
-            borderColor: Colors.blue,
-            textColor: Colors.blue,
+            borderColor: Colors.brown.shade300,
           ),
         ],
       ),

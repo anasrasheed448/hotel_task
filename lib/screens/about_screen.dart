@@ -32,7 +32,7 @@ class About extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 13.0),
+            padding: const EdgeInsets.symmetric(horizontal: 13.0, vertical: 10),
             child: Text.rich(
               TextSpan(
                 style: TextStyle(fontSize: 17),
@@ -40,6 +40,7 @@ class About extends StatelessWidget {
                   TextSpan(
                     text: textNo,
                     style: TextStyle(
+                      fontFamily: 'B612 Mono',
                       fontSize: 27,
                       fontWeight: FontWeight.bold,
                     ),

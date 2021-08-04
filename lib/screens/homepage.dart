@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_circular_text/circular_text.dart';
 import 'package:task01/screens/about_screen.dart';
+import 'package:task01/screens/partners_screen.dart';
 import 'package:task01/screens/style_quiz_screen.dart';
 import 'package:task01/screens/top_screen.dart';
 import 'package:task01/widgets/appbar.dart';
-import 'package:task01/widgets/description_widget.dart';
-
+import 'package:task01/widgets/drawer.dart';
 import 'description_screen.dart';
 import 'order_now_screen.dart';
 import 'rating_screen.dart';
@@ -20,8 +20,8 @@ class HomePage extends StatelessWidget {
         preferredSize: Size.fromHeight(50),
         child: MyAppBar(),
       ),
-      drawer: Drawer(),
-      extendBodyBehindAppBar: true,
+      drawer: AppDrawer(),
+      // extendBodyBehindAppBar: true,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
             Container(
               width: double.infinity,
               color: Colors.lightBlue[50],
-              padding: EdgeInsets.only(top: 10),
+              padding: const EdgeInsets.only(top: 10),
               child: Column(
                 children: [
                   CircularText(
@@ -79,17 +79,18 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-            ),         
+            ),
             About('assets/images/img2.jpeg', "1.\n", "Tell us What you need\n",
-                "pick a room set your buget and tell us aout your\npinteret worthy dreams- whether a full overhaul,or \njust some ideas"),
+                "pick a room set your buget and tell us aout your pinteret worthy dreams- whether a full overhaul,or just some ideas"),
             About('assets/images/img5.jpeg', "2.\n", "Tell us What you need\n",
-                "pick a room set your buget and tell us aout your\npinteret worthy dreams- whether a full overhaul,or \njust some ideas"),
-            About('assets/images/img1.jpeg', "3.\n", "Tell us What you need\n",
-                "pick a room set your buget and tell us aout your\npinteret worthy dreams- whether a full overhaul,or \njust some ideas"),
+                "pick a room set your buget and tell us aout your pinteret worthy dreams- whether a full overhaul,or just some ideas"),
+            About('assets/images/img1.jpeg', "3.\n", "Tell us What you need \n",
+                "pick a room set your buget and tell us aout your pinteret worthy dreams- whether a full overhaul,or just some ideas"),
             OrderNowScreen(),
-            img(),  
+            img(),
             StyleQuizScreen(),
             DescriptionScreen(),
+            PartnerScreen(),
             img(),
             RatingScreen(),
           ],

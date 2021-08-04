@@ -18,7 +18,7 @@ class DescriptionWidget extends StatelessWidget {
             color: Colors.blue,
             size: 60,
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text.rich(
             TextSpan(
               children: [

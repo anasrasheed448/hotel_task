@@ -5,7 +5,7 @@ class OrderNowScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 20),
+      padding: const EdgeInsets.only(left: 20),
       width: double.infinity,
       height: 600,
       color: Colors.amber[50],
@@ -37,9 +37,9 @@ class OrderNowScreen extends StatelessWidget {
                   ),
                 ]),
           ),
-          CustomBtn("Order Now", Colors.blueAccent.shade700),
+          CustomBtn("Order Now", Colors.brown.shade200,textColor: Colors.white,),
           Container(
-            margin: EdgeInsets.only(left: 50),
+            margin: const EdgeInsets.only(left: 50),
             width: 150,
             height: 220,
             child: Image.asset(

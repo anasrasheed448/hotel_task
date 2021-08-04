@@ -1,7 +1,31 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:task01/widgets/custom_button.dart';
 
 class TopScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final _img = ["assets/images/img7.jpeg","assets/images/img6.jpeg","assets/images/img5.jpeg","assets/images/img3.jpeg","assets/images/img4.jpeg"];
+    final height = MediaQuery.of(context).size.height;
+    return CarouselSlider.builder(
+        itemCount: _img.length,
+        itemBuilder: (context, i, _) => CarouselImage(img: _img[i]),
+        options: CarouselOptions(
+          autoPlay: true,
+          height: height * 0.73,
+          autoPlayCurve: Curves.easeIn,
+          enlargeCenterPage: true,
+        ));
+  }
+}
+
+class CarouselImage extends StatelessWidget {
+  const CarouselImage({
+    required this.img,
+  });
+
+  final String img;
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -9,15 +33,16 @@ class TopScreen extends StatelessWidget {
       width: double.infinity,
       height: height * 0.73,
       decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
         image: DecorationImage(
-          image: AssetImage('assets/images/img7.jpeg'),
+          image: AssetImage(img),
           colorFilter: ColorFilter.mode(
               Colors.black.withOpacity(0.8), BlendMode.dstATop),
           fit: BoxFit.cover,
         ),
       ),
       child: Container(
-        margin: EdgeInsets.only(top: 100, left: 30),
+        margin: const EdgeInsets.only(top: 100, left: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -34,7 +59,7 @@ class TopScreen extends StatelessWidget {
                       text: "big item",
                       style: TextStyle(
                         decoration: TextDecoration.underline,
-                        decorationColor: Colors.red[300],
+                        decorationColor: Colors.red.shade300,
                       ),
                     ),
                     TextSpan(

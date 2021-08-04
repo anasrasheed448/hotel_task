@@ -4,7 +4,7 @@ class RatingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10, left: 20, right: 10),
+      margin: const EdgeInsets.only(top: 10, left: 20, right: 10),
       child: Column(
         children: [
           Text(
@@ -29,7 +29,7 @@ class RatingScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20, bottom: 20),
+            padding: const  EdgeInsets.only(left: 20, bottom: 20),
             child: Row(
               children: [
                 Icon(Icons.star, color: Colors.blueAccent),
