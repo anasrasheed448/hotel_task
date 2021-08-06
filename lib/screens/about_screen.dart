@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class About extends StatelessWidget {
+  static const routeName = 'about-page';
   final String image;
   final String textNo;
   final String heading;

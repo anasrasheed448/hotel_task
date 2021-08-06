@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:task01/widgets/custom_button.dart';
 
 class PartnerScreen extends StatelessWidget {
+  static const routeName = 'partner-page';
+
   @override
   Widget build(BuildContext context) {
     return Container(

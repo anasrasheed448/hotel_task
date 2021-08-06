@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:task01/screens/tabScreen.dart';
 
 import 'screens/homepage.dart';
 
@@ -26,7 +27,9 @@ class MyApp extends StatelessWidget {
         // primarySwatch: Colors.blue,
       ),
       home: SplashScreen(),
-      routes: {HomePage.routeName: (ctx) => HomePage()},
+      routes: {
+        HomePage.routeName: (ctx) => HomePage(),
+      },
     );
   }
 }
@@ -44,7 +47,8 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void redirectTo() {
-    Navigator.pushReplacementNamed(context, HomePage.routeName);
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (ctx) => TabScreen()));
   }
 
   @override
