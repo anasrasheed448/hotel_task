@@ -22,17 +22,16 @@ class TopScreen extends StatelessWidget {
             itemBuilder: (context, i, _) => CarouselImage(img: _img[i]),
             options: CarouselOptions(
               autoPlay: true,
-              height: height * 0.66,
+              height: height * 0.63,
               autoPlayCurve: Curves.easeIn,
               enlargeCenterPage: true,
             )),
         Expanded(
           child: Container(
-            // height: height * 0.2,
             width: double.infinity,
-            color: Colors.lightBlue[50],
+            color: Colors.red[50],
             padding: const EdgeInsets.only(top: 10),
-            child: ListView(
+            child: Column(
               children: [
                 Container(
                   height: 100,
@@ -69,11 +68,10 @@ class TopScreen extends StatelessWidget {
                     ],
                     // radius: 50,
                     position: CircularTextPosition.inside,
-                    backgroundPaint: Paint()..color = Colors.lightBlue.shade50,
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(6.0),
                   child: Text(
                     "Our happiness Gurantee:\nYour Love will havenly experience or\nYour Love will havenly experience or",
                     textAlign: TextAlign.center,
@@ -105,7 +103,7 @@ class CarouselImage extends StatelessWidget {
       width: double.infinity,
       height: height * 0.55,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(15),
         image: DecorationImage(
           image: AssetImage(img),
           colorFilter: ColorFilter.mode(
@@ -113,12 +111,18 @@ class CarouselImage extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      child: Container(
-        margin: const EdgeInsets.only(top: 100, left: 30),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text.rich(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            margin: EdgeInsets.only(top: 100, left: 10, right: 10),
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.black38.withOpacity(.3),
+            ),
+            // height: 200,
+            child: Text.rich(
               TextSpan(
                   style: TextStyle(
                     fontSize: 30,
@@ -146,12 +150,16 @@ class CarouselImage extends StatelessWidget {
                     ),
                   ]),
             ),
-            Padding(
+          ),
+          Padding(
               padding: const EdgeInsets.only(top: 10),
-              child: CustomBtn("Find Your Style", Colors.white),
-            ),
-          ],
-        ),
+              child: CustomBtn(
+                "Find Your Style",
+                Colors.white,
+                vertical: 15,
+                borderRadius: 20,
+              )),
+        ],
       ),
     );
   }

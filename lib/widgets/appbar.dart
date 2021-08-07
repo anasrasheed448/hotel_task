@@ -4,7 +4,7 @@ class MyAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 50),
+      padding: EdgeInsets.only(left: 50, top: 10, bottom: 0),
       child: Row(
         children: [
           Text(

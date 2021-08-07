@@ -1,5 +1,5 @@
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:task01/screens/about_screen.dart';
 import 'package:task01/screens/partners_screen.dart';
 import 'package:task01/screens/rating_screen.dart';
 import 'package:task01/widgets/appbar.dart';
@@ -16,16 +16,19 @@ class TabScreen extends StatefulWidget {
 }
 
 class _TabScreenState extends State<TabScreen> {
+  var active = true;
   GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
 
-  var _currentIndex = 1;
+  var _currentIndex = 0;
   List<Map<String, Widget>> _pages = [];
   @override
   void initState() {
     _pages = [
-      {},
       {
         'page': HomePage(),
+      },
+      {
+        'page': DescriptionScreen(),
       },
       {
         'page': RatingScreen(),
@@ -47,41 +50,57 @@ class _TabScreenState extends State<TabScreen> {
       ),
       body: _pages[_currentIndex]['page'],
       drawer: AppDrawer(),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        unselectedItemColor: Colors.black,
-        unselectedLabelStyle: TextStyle(color: Colors.black),
-        selectedItemColor: Colors.blue,
-        
-        selectedLabelStyle: TextStyle(fontSize: 16),
-        
-        onTap: (index) {
-          print(index);
-          index == 0
-              ? _drawerKey.currentState!.openDrawer()
-              : setState(() {
-                  _currentIndex = index;
-                });
-        },
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.more_vert),
-            label: "Drawer",
-            backgroundColor: Colors.black54,
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20),
+              topRight: Radius.circular(20),
+            ),
+            border: Border.all(color: Colors.black.withOpacity(.3))),
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.help_center_outlined),
-            label: "Description",
+          child: BottomNavyBar(
+            backgroundColor: Colors.white,
+            showElevation: true,
+            selectedIndex: _currentIndex,
+            onItemSelected: (index) => setState(() {
+              _currentIndex = index;
+            }),
+            items: [
+              BottomNavyBarItem(
+                textAlign: TextAlign.end,
+                icon: Icon(Icons.apps),
+                title: Text('Home'),
+                activeColor: Colors.black.withOpacity(.3),
+                inactiveColor: Colors.grey,
+              ),
+              BottomNavyBarItem(
+                textAlign: TextAlign.end,
+                icon: Icon(Icons.description),
+                title: Text('Description'),
+                activeColor: Colors.brown.shade200,
+                inactiveColor: Colors.grey,
+              ),
+              BottomNavyBarItem(
+                textAlign: TextAlign.end,
+                icon: Icon(Icons.star),
+                title: Text('Rating'),
+                inactiveColor: Colors.grey,
+                activeColor: Colors.blue.shade300,
+              ),
+              BottomNavyBarItem(
+                textAlign: TextAlign.end,
+                icon: Icon(Icons.person),
+                title: Text('Partners'),
+                inactiveColor: Colors.grey,
+                activeColor: Colors.red.shade200,
+              ),
+            ],
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.star_border_outlined),
-            label: 'Rating',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.people_alt_outlined),
-            label: 'Partners',
-          ),
-        ],
+        ),
       ),
     );
   }

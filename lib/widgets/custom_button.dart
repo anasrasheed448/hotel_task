@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
 
 class CustomBtn extends StatelessWidget {
-  CustomBtn(this.text, this.btnColor,
-      {this.borderColor = Colors.transparent, this.textColor = Colors.black});
+  CustomBtn(
+    this.text,
+    this.btnColor, {
+    this.borderColor = Colors.transparent,
+    this.textColor = Colors.black,
+    this.borderRadius = 1,
+    this.elevation = 0,
+    this.horizontal=30,
+    this.vertical=10,
+  });
   final String text;
   final Color btnColor;
   final Color borderColor;
   final Color textColor;
+  final double borderRadius;
+  final double elevation;
+  final double horizontal;
+  final double vertical;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -18,9 +30,9 @@ class CustomBtn extends StatelessWidget {
       ),
       style: ElevatedButton.styleFrom(
         primary: btnColor,
-        padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 15),
+        padding: EdgeInsets.symmetric(horizontal: horizontal, vertical: vertical),
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(borderRadius),
             side: BorderSide(color: borderColor)),
       ),
     );

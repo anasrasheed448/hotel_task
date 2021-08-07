@@ -34,6 +34,7 @@ class HomePage extends StatelessWidget {
         DescriptionScreen(),
         PartnerScreen(),
         RatingScreen(),
+        // FooterScreen(),
       ],
     );
   }
