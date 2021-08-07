@@ -28,7 +28,7 @@ class RatingScreen extends StatelessWidget {
                   title: Text.rich(TextSpan(children: [
                     TextSpan(text: "Designed by"),
                     TextSpan(
-                        text: " Anas Rasheed",
+                        text: " John Doe",
                         style: TextStyle(decoration: TextDecoration.underline))
                   ])),
                   subtitle: Text("For Luigi P."),
@@ -52,21 +52,21 @@ class RatingScreen extends StatelessWidget {
               ),
               Text(
                   "you create a personel and inspiredhome designed you create a personel and inspiredhome designed for actually living"),
-              Container(
-                margin: EdgeInsets.only(top: 10),
-                height: MediaQuery.of(context).size.height * 0.25,
-                child: ListView(
-                  children: [
-                    ListTiles("Happiness Guarntee"),
-                    customDivider(),
-                    ListTiles("Company"),
-                    customDivider(),
-                    ListTiles("Explore"),
-                    customDivider(),
-                    ListTiles("Contact us"),
-                  ],
-                ),
-              )
+              // Container(
+              //   margin: EdgeInsets.only(top: 10),
+              //   height: MediaQuery.of(context).size.height * 0.25,
+              //   child: ListView(
+              //     children: [
+              //       ListTiles("Happiness Guarntee"),
+              //       customDivider(),
+              //       ListTiles("Company"),
+              //       customDivider(),
+              //       ListTiles("Explore"),
+              //       customDivider(),
+              //       ListTiles("Contact us"),
+              //     ],
+              //   ),
+              // )
             ],
           ),
         ),
@@ -75,55 +75,55 @@ class RatingScreen extends StatelessWidget {
   }
 }
 
-class ListTiles extends StatefulWidget {
-  final String text;
+// class ListTiles extends StatefulWidget {
+//   final String text;
 
-  const ListTiles(this.text);
+//   const ListTiles(this.text);
 
-  @override
-  _ListTilesState createState() => _ListTilesState();
-}
+//   @override
+//   _ListTilesState createState() => _ListTilesState();
+// }
 
-class _ListTilesState extends State<ListTiles> {
-  bool expand = false;
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        ListTile(
-          contentPadding: EdgeInsets.symmetric(horizontal: 12),
-          title: Text(
-            '${widget.text}',
-            style: TextStyle(fontSize: 18, color: Colors.blue),
-          ),
-          onTap: () {
-            setState(() {
-              expand = !expand;
-            });
-          },
-          trailing: Icon(
-            !expand ? Icons.add : Icons.remove,
-            size: 18,
-            color: Colors.blue,
-          ),
-        ),
-        if (expand)
-          Container(
-            margin: EdgeInsets.only(left: 20),
-            child: Column(
-              children: [
-                Text(
-                  "hello how Are you fine what about you",
-                  style: TextStyle(fontSize: 18, color: Colors.grey),
-                ),
-              ],
-            ),
-          )
-      ],
-    );
-  }
-}
+// class _ListTilesState extends State<ListTiles> {
+//   bool expand = false;
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       crossAxisAlignment: CrossAxisAlignment.start,
+//       children: [
+//         ListTile(
+//           contentPadding: EdgeInsets.symmetric(horizontal: 12),
+//           title: Text(
+//             '${widget.text}',
+//             style: TextStyle(fontSize: 18, color: Colors.blue),
+//           ),
+//           onTap: () {
+//             setState(() {
+//               expand = !expand;
+//             });
+//           },
+//           trailing: Icon(
+//             !expand ? Icons.add : Icons.remove,
+//             size: 18,
+//             color: Colors.blue,
+//           ),
+//         ),
+//         if (expand)
+//           Container(
+//             margin: EdgeInsets.only(left: 20),
+//             child: Column(
+//               children: [
+//                 Text(
+//                   "hello how Are you fine what about you",
+//                   style: TextStyle(fontSize: 18, color: Colors.grey),
+//                 ),
+//               ],
+//             ),
+//           )
+//       ],
+//     );
+//   }
+// }
 
 Container customDivider() {
   return Container(

@@ -16,16 +16,16 @@ class TabScreen extends StatefulWidget {
 }
 
 class _TabScreenState extends State<TabScreen> {
-  var _currentIndex = 0;
+  GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
+
+  var _currentIndex = 1;
   List<Map<String, Widget>> _pages = [];
   @override
   void initState() {
     _pages = [
+      {},
       {
         'page': HomePage(),
-      },
-      {
-        'page': DescriptionScreen(),
       },
       {
         'page': RatingScreen(),
@@ -40,27 +40,34 @@ class _TabScreenState extends State<TabScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _drawerKey,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(50),
         child: MyAppBar(),
       ),
-      drawer: AppDrawer(),
       body: _pages[_currentIndex]['page'],
+      drawer: AppDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         unselectedItemColor: Colors.black,
         unselectedLabelStyle: TextStyle(color: Colors.black),
         selectedItemColor: Colors.blue,
+        
         selectedLabelStyle: TextStyle(fontSize: 16),
+        
         onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
+          print(index);
+          index == 0
+              ? _drawerKey.currentState!.openDrawer()
+              : setState(() {
+                  _currentIndex = index;
+                });
         },
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
+            icon: Icon(Icons.more_vert),
+            label: "Drawer",
+            backgroundColor: Colors.black54,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.help_center_outlined),
