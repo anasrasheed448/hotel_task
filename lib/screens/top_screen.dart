@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_circular_text/circular_text.dart';
+import 'package:task01/constants/style.dart';
 import 'package:task01/widgets/custom_button.dart';
 
 class TopScreen extends StatelessWidget {
@@ -17,16 +18,20 @@ class TopScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CarouselSlider.builder(
-            itemCount: _img.length,
-            itemBuilder: (context, i, _) => CarouselImage(img: _img[i]),
-            options: CarouselOptions(
-              autoPlay: true,
-              height: height * 0.63,
-              autoPlayCurve: Curves.easeIn,
-              enlargeCenterPage: true,
-            )),
         Expanded(
+          flex: 4,
+          child: CarouselSlider.builder(
+              itemCount: _img.length,
+              itemBuilder: (context, i, _) => CarouselImage(img: _img[i]),
+              options: CarouselOptions(
+                autoPlay: true,
+                height: height * 0.63,
+                autoPlayCurve: Curves.easeIn,
+                enlargeCenterPage: true,
+              )),
+        ),
+        Expanded(
+          flex: 2,
           child: Container(
             width: double.infinity,
             color: Colors.red[50],
@@ -42,7 +47,7 @@ class TopScreen extends StatelessWidget {
                           "A Design You Love".toUpperCase(),
                           style: TextStyle(
                             fontSize: 27,
-                            color: Colors.black,
+                            color: dark,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -56,7 +61,7 @@ class TopScreen extends StatelessWidget {
                           "Or your Money Back".toUpperCase(),
                           style: TextStyle(
                             fontSize: 27,
-                            color: Colors.black,
+                            color: dark,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -106,8 +111,8 @@ class CarouselImage extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
         image: DecorationImage(
           image: AssetImage(img),
-          colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.8), BlendMode.dstATop),
+          colorFilter:
+              ColorFilter.mode(dark.withOpacity(0.8), BlendMode.dstATop),
           fit: BoxFit.cover,
         ),
       ),
@@ -127,7 +132,7 @@ class CarouselImage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: white,
                   ),
                   children: [
                     TextSpan(text: "I have all My "),
@@ -135,7 +140,7 @@ class CarouselImage extends StatelessWidget {
                       text: "big item",
                       style: TextStyle(
                         decoration: TextDecoration.underline,
-                        decorationColor: Colors.red.shade300,
+                        decorationColor: lightred,
                       ),
                     ),
                     TextSpan(
@@ -145,7 +150,7 @@ class CarouselImage extends StatelessWidget {
                       text: "put it all together",
                       style: TextStyle(
                         decoration: TextDecoration.underline,
-                        decorationColor: Colors.red[300],
+                        decorationColor: lightred,
                       ),
                     ),
                   ]),
@@ -155,7 +160,7 @@ class CarouselImage extends StatelessWidget {
               padding: const EdgeInsets.only(top: 10),
               child: CustomBtn(
                 "Find Your Style",
-                Colors.white,
+                white,
                 vertical: 15,
                 borderRadius: 20,
               )),

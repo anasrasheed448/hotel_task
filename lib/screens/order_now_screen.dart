@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task01/constants/style.dart';
 import 'package:task01/widgets/custom_button.dart';
 
 class OrderNowScreen extends StatelessWidget {
@@ -16,7 +17,7 @@ class OrderNowScreen extends StatelessWidget {
           Text(
             "We wrote a book",
             style: TextStyle(
-                color: Colors.brown.shade200,
+                color: lightbrown,
                 fontWeight: FontWeight.bold,
                 fontSize: 16),
           ),
@@ -31,7 +32,7 @@ class OrderNowScreen extends StatelessWidget {
                     TextSpan(
                       text: "Design the \nhome you love\n",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: dark,
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
                     ),
@@ -45,12 +46,12 @@ class OrderNowScreen extends StatelessWidget {
           CustomBtn(
             "Order Now",
             Colors.red.shade400,
-            textColor: Colors.white,
+            textColor: white,
             borderRadius: 20,
             horizontal: 35,
           ),
           Container(
-            color: Colors.white,
+            color: white,
             width: 300,
             height: 310,
             child: Stack(

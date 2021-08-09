@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:task01/constants/style.dart';
 
 class FooterScreen extends StatelessWidget {
   const FooterScreen({Key? key}) : super(key: key);
@@ -96,10 +97,4 @@ class _ListTilesState extends State<ListTiles> {
   }
 }
 
-Container customDivider() {
-  return Container(
-    width: double.infinity,
-    height: 2,
-    color: Colors.grey[400],
-  );
-}
+

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:task01/constants/style.dart';
 
 import 'homepage.dart';
 
@@ -22,7 +23,7 @@ class RatingScreen extends StatelessWidget {
                 Text(
                   "Mid If we Show Off",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: dark,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -47,11 +48,11 @@ class RatingScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20, bottom: 20),
                   child: Row(
                     children: [
-                      Icon(Icons.star, color: Colors.black),
-                      Icon(Icons.star, color: Colors.black),
-                      Icon(Icons.star, color: Colors.black),
-                      Icon(Icons.star, color: Colors.black),
-                      Icon(Icons.star, color: Colors.black),
+                      Icon(Icons.star, color: dark),
+                      Icon(Icons.star, color: dark),
+                      Icon(Icons.star, color: dark),
+                      Icon(Icons.star, color: dark),
+                      Icon(Icons.star, color: dark),
                     ],
                   ),
                 ),
@@ -84,7 +85,7 @@ class RatingScreen extends StatelessWidget {
                   "  @2021 STAGEHUB INC, All Rights Reserved\n  Find us in the AppStore | PrivacyPolicy | Terms Of Service",
                   style: TextStyle(
                     fontSize: 13,
-                    color: Colors.grey,
+                    color: grey,
                   ),
                   maxLines: 3,
                 ),

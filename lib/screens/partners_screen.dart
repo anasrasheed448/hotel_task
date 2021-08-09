@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task01/constants/style.dart';
 import 'package:task01/screens/homepage.dart';
 import 'package:task01/widgets/custom_button.dart';
 
@@ -83,12 +84,4 @@ class PartnerScreen extends StatelessWidget {
   }
 }
 
-Text customHeading(String text) {
-  return Text(
-    text,
-    style: TextStyle(
-        fontSize: 16,
-        color: Colors.brown.shade200,
-        fontWeight: FontWeight.bold),
-  );
-}
+

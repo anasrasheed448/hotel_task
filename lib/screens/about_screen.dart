@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task01/constants/style.dart';
 
 class About extends StatelessWidget {
   static const routeName = 'about-page';
@@ -15,7 +16,7 @@ class About extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.5), BlendMode.dstATop),
+             dark.withOpacity(0.5), BlendMode.dstATop),
           image: AssetImage(image),
           fit: BoxFit.cover,
         ),

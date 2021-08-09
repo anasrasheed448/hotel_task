@@ -1,5 +1,6 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:task01/constants/style.dart';
 import 'package:task01/screens/partners_screen.dart';
 import 'package:task01/screens/rating_screen.dart';
 import 'package:task01/widgets/appbar.dart';
@@ -56,14 +57,14 @@ class _TabScreenState extends State<TabScreen> {
               topLeft: Radius.circular(20),
               topRight: Radius.circular(20),
             ),
-            border: Border.all(color: Colors.black.withOpacity(.3))),
+            border: Border.all(color: dark.withOpacity(.3))),
         child: ClipRRect(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
           ),
           child: BottomNavyBar(
-            backgroundColor: Colors.white,
+            backgroundColor: white,
             showElevation: true,
             selectedIndex: _currentIndex,
             onItemSelected: (index) => setState(() {
@@ -74,29 +75,29 @@ class _TabScreenState extends State<TabScreen> {
                 textAlign: TextAlign.end,
                 icon: Icon(Icons.apps),
                 title: Text('Home'),
-                activeColor: Colors.black.withOpacity(.3),
-                inactiveColor: Colors.grey,
+                activeColor: dark.withOpacity(.3),
+                inactiveColor: grey,
               ),
               BottomNavyBarItem(
                 textAlign: TextAlign.end,
                 icon: Icon(Icons.description),
                 title: Text('Description'),
-                activeColor: Colors.brown.shade200,
-                inactiveColor: Colors.grey,
+                activeColor: lightbrown,
+                inactiveColor: grey,
               ),
               BottomNavyBarItem(
                 textAlign: TextAlign.end,
                 icon: Icon(Icons.star),
                 title: Text('Rating'),
-                inactiveColor: Colors.grey,
-                activeColor: Colors.blue.shade300,
+                inactiveColor: grey,
+                activeColor: lightblue,
               ),
               BottomNavyBarItem(
                 textAlign: TextAlign.end,
                 icon: Icon(Icons.person),
                 title: Text('Partners'),
-                inactiveColor: Colors.grey,
-                activeColor: Colors.red.shade200,
+                inactiveColor: grey,
+                activeColor: lightred,
               ),
             ],
           ),

@@ -40,13 +40,4 @@ class HomePage extends StatelessWidget {
   }
 }
 
-Container img() {
-  return Container(
-    width: double.infinity - 10,
-    height: 300,
-    child: Image.asset(
-      "assets/images/img5.jpeg",
-      fit: BoxFit.cover,
-    ),
-  );
-}
+
