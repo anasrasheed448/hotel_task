@@ -11,8 +11,9 @@ class RatingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(height: 400, child: img()),
+        Expanded(flex: 3, child: img()),
         Expanded(
+          flex: 5,
           child: Container(
             color: Colors.red.shade50,
             padding: const EdgeInsets.only(top: 10, left: 20, right: 10),

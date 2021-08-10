@@ -9,18 +9,20 @@ class StyleQuizScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-            height: MediaQuery.of(context).size.height * 0.4, child: img()),
+        Expanded(flex: 2, child: img()),
         Expanded(
+          flex: 4,
           child: Container(
-            padding: const EdgeInsets.only(left: 20, top: 20),
+            padding: const EdgeInsets.only(left: 20, top: 10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 customHeading("Style Quiz"),
-                const SizedBox(height: 5),
-                Icon(Icons.handyman),
+                Icon(
+                  Icons.handyman,
+                  size: 28,
+                ),
                 Text.rich(
                   TextSpan(
                       style: TextStyle(
@@ -41,9 +43,6 @@ class StyleQuizScreen extends StatelessWidget {
                         ),
                       ]),
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
                 CustomBtn(
                   "Take Style quiz",
                   Colors.red.shade400,
@@ -58,6 +57,4 @@ class StyleQuizScreen extends StatelessWidget {
       ],
     );
   }
-
-  
 }
