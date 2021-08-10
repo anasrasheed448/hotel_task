@@ -13,7 +13,7 @@ class PartnerScreen extends StatelessWidget {
         children: [
           Expanded(flex: 2, child: img()),
           Expanded(
-            flex: 5,
+            flex: 4,
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Column(
@@ -28,8 +28,7 @@ class PartnerScreen extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text:
-                              "We work with more than 200 vendors,bigs and small\n",
+                          text: '$partnerHeading',
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 28,
@@ -37,8 +36,7 @@ class PartnerScreen extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text:
-                              "The ultimate guidebook to help you create a personel and inspiredhome designed for actually living",
+                          text: '$partnerText',
                         ),
                       ],
                     ),
@@ -47,14 +45,10 @@ class PartnerScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text.rich(
-                        TextSpan(
-                            text:
-                                "West Elm\nInterior Define\nCB2\nArticle\nSurya"),
+                        TextSpan(text: '$partnerData'),
                       ),
                       Text.rich(
-                        TextSpan(
-                            text:
-                                "West Elm\nInterior Define\nCB2\nArticle\nSurya"),
+                        TextSpan(text: '$partnerData'),
                       ),
                     ],
                   ),

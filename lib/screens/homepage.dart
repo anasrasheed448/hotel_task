@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:task01/constants/style.dart';
 import 'package:task01/screens/about_screen.dart';
 import 'package:task01/screens/partners_screen.dart';
 import 'package:task01/screens/style_quiz_screen.dart';
@@ -23,12 +24,9 @@ class HomePage extends StatelessWidget {
       scrollDirection: Axis.vertical,
       children: [
         TopScreen(),
-        About('assets/images/img2.jpeg', "1.\n", "Tell us What you need\n",
-            "pick a room set your buget and tell us about your pinteret worthy dreams- whether a full overhaul,or just some ideas"),
-        About('assets/images/img5.jpeg', "2.\n", "Tell us What you need\n",
-            "pick a room set your buget and tell us about your pinteret worthy dreams- whether a full overhaul,or just some ideas"),
-        About('assets/images/img1.jpeg', "3.\n", "Tell us What you need \n",
-            "pick a room set your buget and tell us about your pinteret worthy dreams- whether a full overhaul,or just some ideas"),
+        AboutScreen(imageArray[5], "1.\n", aboutHeading, aboutText),
+        AboutScreen(imageArray[3], "2.\n", aboutHeading, aboutText),
+        AboutScreen(imageArray[1], "3.\n", aboutHeading, aboutText),
         OrderNowScreen(),
         StyleQuizScreen(),
         DescriptionScreen(),
@@ -39,5 +37,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-

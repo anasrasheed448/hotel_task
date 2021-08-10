@@ -2,16 +2,14 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:task01/constants/style.dart';
 import 'package:task01/screens/tabScreen.dart';
 
 import 'screens/homepage.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,11 +18,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme:
             GoogleFonts.montserratTextTheme(Theme.of(context).textTheme).apply(
-          bodyColor: Colors.black,
+          bodyColor: dark,
         ),
         appBarTheme: AppBarTheme(
-          color: Colors.transparent,
-          iconTheme: IconThemeData(color: Colors.black),
+          color: white,
+          iconTheme: IconThemeData(color: dark),
         ),
         // primarySwatch: Colors.blue,
       ),

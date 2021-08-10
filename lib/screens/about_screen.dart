@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:task01/constants/style.dart';
 
-class About extends StatelessWidget {
+class AboutScreen extends StatelessWidget {
   static const routeName = 'about-page';
   final String image;
   final String textNo;
   final String heading;
   final String description;
 
-  About(this.image, this.textNo, this.heading, this.description);
+  AboutScreen(this.image, this.textNo, this.heading, this.description);
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;

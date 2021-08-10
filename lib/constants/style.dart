@@ -3,17 +3,65 @@ import 'package:flutter/painting.dart';
 
 const Color dark = Colors.black;
 const Color white = Colors.white;
-Color lightred = Colors.red.shade200;
-Color lightbrown = Colors.brown.shade200;
 const Color grey = Colors.grey;
 
+Color lightred = Colors.red.shade200;
+Color lightbrown = Colors.brown.shade200;
 Color lightblue = Colors.blue.shade300;
+
+const imageArray = [
+  "assets/images/img7.jpeg",
+  "assets/images/img6.jpeg",
+  "assets/images/img5.jpeg",
+  "assets/images/img3.jpeg",
+  "assets/images/img4.jpeg",
+  "assets/images/img2.jpeg",
+];
+
+const String carouselText =
+    "Our happiness Gurantee:\nYour Love will havenly experience or\nYour Love will havenly experience or";
+
+const String aboutText =
+    "pick a room set your buget and tell us about your pinteret worthy dreams- whether a full overhaul,or just some ideas";
+
+const String aboutHeading = "Tell us What you need\n";
+
+const String orderText =
+    "The ultimate guidebook to help you create a personel and inspiredhome designed for actually living";
+
+const String orderHeading = "Design the \nhome you love\n";
+
+const String footerText =
+    "@2021 STAGEHUB INC, All Rights Reserved\n\nFind us in the AppStore | PrivacyPolicy | Terms Of Service";
+
+const String ratingText =
+    "you create a personel and inspiredhome designed you create  and inspired home designed for the actually living personel and inspired home designed for actually living";
+
+const String quizText =
+    "The ultimate guidebook to help you create a personel and inspiredhome designed for actually living";
+const String quizHeading =
+    "Which one are you? we'll help you find your style\n\n";
+
+const String partnerHeading =
+    "We work with more than 200 vendors,bigs and small\n";
+const String partnerText =
+    "The ultimate guidebook to help you create a personel and inspiredhome designed for actually living";
+const String partnerData = "West Elm\nInterior Define\nCB2\nArticle\nSurya";
+const descriptionHeading = [
+  "Find your happy place\n",
+  "Create a lasting relationship\n"
+];
+const descriptionText =
+    "lorem  and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. text of the printing and typesetting industry.Lorem";
 
 Text customHeading(String text) {
   return Text(
     text,
-    style:
-        TextStyle(fontSize: 16, color: lightbrown, fontWeight: FontWeight.bold),
+    style: TextStyle(
+      fontSize: 16,
+      color: lightbrown,
+      fontWeight: FontWeight.bold,
+    ),
   );
 }
 
@@ -27,10 +75,9 @@ Container customDivider() {
 
 Container img() {
   return Container(
-    width: double.infinity - 10,
-    // height: 300,
+    width: double.infinity,
     child: Image.asset(
-      "assets/images/img5.jpeg",
+      imageArray[2],
       fit: BoxFit.cover,
     ),
   );

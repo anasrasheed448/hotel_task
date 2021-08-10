@@ -17,9 +17,7 @@ class OrderNowScreen extends StatelessWidget {
           Text(
             "We wrote a book",
             style: TextStyle(
-                color: lightbrown,
-                fontWeight: FontWeight.bold,
-                fontSize: 16),
+                color: lightbrown, fontWeight: FontWeight.bold, fontSize: 16),
           ),
           Container(
             width: 300,
@@ -30,7 +28,7 @@ class OrderNowScreen extends StatelessWidget {
                   ),
                   children: [
                     TextSpan(
-                      text: "Design the \nhome you love\n",
+                      text: '$orderHeading',
                       style: TextStyle(
                           color: dark,
                           fontSize: 25,
@@ -38,7 +36,7 @@ class OrderNowScreen extends StatelessWidget {
                     ),
                     TextSpan(
                       text:
-                          "The ultimate guidebook to help you create a personel and inspiredhome designed for actually living",
+                          '$orderText',
                     ),
                   ]),
             ),
@@ -50,35 +48,35 @@ class OrderNowScreen extends StatelessWidget {
             borderRadius: 20,
             horizontal: 35,
           ),
-          Container(
-            color: white,
-            width: 300,
-            height: 310,
-            child: Stack(
-              alignment: Alignment.topRight,
-              children: [
-                Image.asset(
-                  'assets/images/img5.jpeg',
-                  fit: BoxFit.cover,
-                  width: 250,
-                  height: 250,
-                ),
-                Positioned(
-                  top: 253,
-                  child: Container(
-                    width: 250,
-                    child: Text(
-                      "Design the home you love".toUpperCase(),
-                      style: TextStyle(
-                        letterSpacing: 4,
-                        fontSize: 23,
-                        fontWeight: FontWeight.bold,
-                      ),
+          Stack(
+            alignment: Alignment.topRight,
+            children: [
+              Container(
+                color: white,
+                width: 280,
+                height: 350,
+              ),
+              Image.asset(
+                imageArray[2],
+                fit: BoxFit.cover,
+                width: 230,
+                height: 250,
+              ),
+              Positioned(
+                top: 253,
+                child: Container(
+                  width: 230,
+                  child: Text(
+                    "Design the home you love".toUpperCase(),
+                    style: TextStyle(
+                      letterSpacing: 4,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),

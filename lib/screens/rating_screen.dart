@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:task01/constants/style.dart';
 
-import 'homepage.dart';
-
 class RatingScreen extends StatelessWidget {
   static const routeName = 'rating-page';
 
@@ -11,15 +9,19 @@ class RatingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(flex: 3, child: img()),
         Expanded(
-          flex: 5,
+          flex: 3,
+          child: img(),
+        ),
+        Expanded(
+          flex: 4,
           child: Container(
             color: Colors.red.shade50,
             padding: const EdgeInsets.only(top: 10, left: 20, right: 10),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
                   "Mid If we Show Off",
@@ -57,9 +59,8 @@ class RatingScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                Text(
-                    "you create a personel and inspiredhome designed you create a personel and inspiredhome designed for actually living"),
-                SizedBox(height: 10),
+                Text('$ratingText'),
+                // SizedBox(height: 15),
                 Text.rich(TextSpan(
                   text: "See the Design",
                   style: TextStyle(
@@ -68,6 +69,7 @@ class RatingScreen extends StatelessWidget {
                       color: Colors.blue[900],
                       decoration: TextDecoration.underline),
                 )),
+                // SizedBox(height: 20),
                 Container(
                   padding: EdgeInsets.only(top: 20, left: 10),
                   width: 150,
@@ -81,14 +83,14 @@ class RatingScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 5),
+                // SizedBox(height: 20),
                 Text(
-                  "  @2021 STAGEHUB INC, All Rights Reserved\n  Find us in the AppStore | PrivacyPolicy | Terms Of Service",
+                  '$footerText',
                   style: TextStyle(
                     fontSize: 13,
                     color: grey,
                   ),
-                  maxLines: 3,
+                  maxLines: 4,
                 ),
               ],
             ),

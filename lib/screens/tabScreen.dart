@@ -4,8 +4,6 @@ import 'package:task01/constants/style.dart';
 import 'package:task01/screens/partners_screen.dart';
 import 'package:task01/screens/rating_screen.dart';
 import 'package:task01/widgets/appbar.dart';
-import 'package:task01/widgets/drawer.dart';
-
 import 'description_screen.dart';
 import 'homepage.dart';
 
@@ -50,7 +48,6 @@ class _TabScreenState extends State<TabScreen> {
         child: MyAppBar(),
       ),
       body: _pages[_currentIndex]['page'],
-      drawer: AppDrawer(),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.only(
@@ -71,38 +68,27 @@ class _TabScreenState extends State<TabScreen> {
               _currentIndex = index;
             }),
             items: [
-              BottomNavyBarItem(
-                textAlign: TextAlign.end,
-                icon: Icon(Icons.apps),
-                title: Text('Home'),
-                activeColor: dark.withOpacity(.3),
-                inactiveColor: grey,
-              ),
-              BottomNavyBarItem(
-                textAlign: TextAlign.end,
-                icon: Icon(Icons.description),
-                title: Text('Description'),
-                activeColor: lightbrown,
-                inactiveColor: grey,
-              ),
-              BottomNavyBarItem(
-                textAlign: TextAlign.end,
-                icon: Icon(Icons.star),
-                title: Text('Rating'),
-                inactiveColor: grey,
-                activeColor: lightblue,
-              ),
-              BottomNavyBarItem(
-                textAlign: TextAlign.end,
-                icon: Icon(Icons.person),
-                title: Text('Partners'),
-                inactiveColor: grey,
-                activeColor: lightred,
-              ),
+              bottomNavItem(Icons.apps, 'Home', lightblue),
+              bottomNavItem(Icons.description, 'Description', lightbrown),
+              bottomNavItem(Icons.star, 'Rating', dark),
+              bottomNavItem(Icons.person, 'Partners', lightred),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  BottomNavyBarItem bottomNavItem(
+      IconData icon, String text, Color activeColor) {
+    return BottomNavyBarItem(
+      textAlign: TextAlign.end,
+      icon: Icon(icon),
+      title: Text(
+        text,
+      ),
+      activeColor: activeColor.withOpacity(.3),
+      inactiveColor: grey,
     );
   }
 }

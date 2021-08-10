@@ -2,16 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:task01/constants/style.dart';
 import 'package:task01/widgets/custom_button.dart';
 
-import 'homepage.dart';
-
 class StyleQuizScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(flex: 2, child: img()),
+        Expanded(flex: 3, child: img()),
         Expanded(
-          flex: 4,
+          flex: 3,
           child: Container(
             padding: const EdgeInsets.only(left: 20, top: 10),
             child: Column(
@@ -21,7 +19,7 @@ class StyleQuizScreen extends StatelessWidget {
                 customHeading("Style Quiz"),
                 Icon(
                   Icons.handyman,
-                  size: 28,
+                  size: 30,
                 ),
                 Text.rich(
                   TextSpan(
@@ -31,7 +29,7 @@ class StyleQuizScreen extends StatelessWidget {
                       children: [
                         TextSpan(
                           text:
-                              "Which one are you? we'll help you find your style\n",
+                              '$quizHeading',
                           style: TextStyle(
                               color: Colors.black,
                               fontSize: 28,
@@ -39,7 +37,7 @@ class StyleQuizScreen extends StatelessWidget {
                         ),
                         TextSpan(
                           text:
-                              "The ultimate guidebook to help you create a personel and inspiredhome designed for actually living",
+                             '$quizText',
                         ),
                       ]),
                 ),
