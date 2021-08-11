@@ -11,7 +11,10 @@ class PartnerScreen extends StatelessWidget {
       color: Colors.red.shade50,
       child: Column(
         children: [
-          Expanded(flex: 2, child: img()),
+          Expanded(
+            flex: 2,
+            child: img(),
+          ),
           Expanded(
             flex: 4,
             child: Container(

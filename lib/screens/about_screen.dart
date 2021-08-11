@@ -15,8 +15,8 @@ class AboutScreen extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          colorFilter: ColorFilter.mode(
-             dark.withOpacity(0.5), BlendMode.dstATop),
+          colorFilter:
+              ColorFilter.mode(dark.withOpacity(0.5), BlendMode.dstATop),
           image: AssetImage(image),
           fit: BoxFit.cover,
         ),
@@ -27,14 +27,14 @@ class AboutScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Padding(
-            padding: const EdgeInsets.all(13.0),
+            padding: const EdgeInsets.all(40.0),
             child: Text(
               "Even Simpler than you Think",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 13.0, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 13.0, vertical: 30),
             child: Text.rich(
               TextSpan(
                 style: TextStyle(fontSize: 17),

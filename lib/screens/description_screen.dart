@@ -9,12 +9,12 @@ class DescriptionScreen extends StatelessWidget {
       height: double.maxFinite,
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 40),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          const Text(
-            "Interior Design is for EveryOne",
+           Text(
+            descriptionMainHeading,
             style: TextStyle(
-              fontSize: 17,
+              fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
           ),

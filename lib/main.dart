@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Hotel',
       theme: ThemeData(
         textTheme:
-            GoogleFonts.montserratTextTheme(Theme.of(context).textTheme).apply(
+            GoogleFonts.latoTextTheme(Theme.of(context).textTheme).apply(
           bodyColor: dark,
         ),
         appBarTheme: AppBarTheme(
